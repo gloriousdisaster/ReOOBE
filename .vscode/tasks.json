@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PSScriptAnalyzer: Analyze (repo)",
+      "type": "process",
+      "command": "pwsh",
+      "windows": { "command": "powershell.exe" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "Invoke-ScriptAnalyzer -Path '${workspaceFolder}' -Recurse -Settings '${workspaceFolder}/.vscode/PSScriptAnalyzerSettings.psd1' -ReportSummary"
+      ],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "PSScriptAnalyzer: Analyze & Fix (repo)",
+      "type": "process",
+      "command": "pwsh",
+      "windows": { "command": "powershell.exe" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "Invoke-ScriptAnalyzer -Path '${workspaceFolder}' -Recurse -Settings '${workspaceFolder}/.vscode/PSScriptAnalyzerSettings.psd1' -Fix -ReportSummary"
+      ],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Sanity: Echo (hello from tasks)",
+      "type": "process",
+      "command": "pwsh",
+      "windows": { "command": "powershell.exe" },
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "Write-Host 'Hello from VS Code task'; $PSVersionTable.PSVersion; Get-Module PSScriptAnalyzer -ListAvailable | Select-Object Name,Version,Path"
+      ],
+      "presentation": { "reveal": "always", "panel": "new" },
+      "problemMatcher": []
+    }
+  ]
+}

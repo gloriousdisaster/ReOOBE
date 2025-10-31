@@ -1,0 +1,119 @@
+# =========================================================
+#  .gitignore – Large / Binary / Build Artifacts
+#  Purpose: Prevent committing large or unnecessary files
+#  Author: Josh Dore
+#  =========================================================
+
+# --- Installers & Executables ---
+*.exe
+*.msi
+*.msu
+*.msp
+*.bat
+*.cmd
+*.ps1
+*.vbs
+*.jar
+
+# --- Disk Images / ISOs / VMs ---
+*.iso
+*.img
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+*.qcow2
+*.vmdk
+
+# --- Archives & Compressed Files ---
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.bz2
+*.xz
+*.tgz
+*.lz
+*.lzma
+
+# --- Office / PDF / Design Assets ---
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.vsd
+*.vsdx
+*.psd
+*.ai
+*.indd
+
+# --- Media (Audio / Video / Image dumps) ---
+*.mp3
+*.wav
+*.flac
+*.aac
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.jpg
+*.jpeg
+*.png
+*.tiff
+*.bmp
+*.heic
+*.raw
+
+# --- Development Build Artifacts ---
+*.obj
+*.pdb
+*.lib
+*.dll
+*.so
+*.a
+*.o
+*.dylib
+*.class
+*.pyc
+*.pyo
+*.log
+
+# --- Database / Export Dumps ---
+*.bak
+*.db
+*.sqlite
+*.sql
+*.dump
+*.csv
+*.tsv
+
+# --- System / Temporary Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.tmp
+*.temp
+*.log
+*.old
+
+# --- Node / Python / Build Cache ---
+node_modules/
+dist/
+build/
+__pycache__/
+.cache/
+
+
+
+.cab
+
+
+/pos/*
+/global/*

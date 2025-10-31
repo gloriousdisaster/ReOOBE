@@ -1,0 +1,74 @@
+{
+  // ===== PowerShell formatting (yours, kept) =====
+  "powershell.codeFormatting.preset": "Custom",
+  "powershell.codeFormatting.openBraceOnSameLine": true,
+  "powershell.codeFormatting.newLineAfterOpenBrace": true,
+  "powershell.codeFormatting.newLineAfterCloseBrace": true,
+  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+  "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+  "powershell.codeFormatting.whitespaceAroundOperator": true,
+  "powershell.codeFormatting.whitespaceAfterSeparator": true,
+  "powershell.codeFormatting.whitespaceInsideBrace": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": false,
+  "powershell.codeFormatting.ignoreOneLineBlock": true,
+  "powershell.codeFormatting.alignPropertyValuePairs": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+
+  // ===== PSScriptAnalyzer integration =====
+  "powershell.scriptAnalysis.enable": true,
+  // moved to .vscode so it travels with the workspace config
+  "powershell.scriptAnalysis.settingsPath": ".vscode/PSScriptAnalyzerSettings.psd1",
+
+  // Run fixes & formatting on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  // ===== Editor settings for PowerShell files (yours, with default formatter added) =====
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.rulers": [120],
+    "files.encoding": "utf8bom",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+
+  // ===== File associations (yours) =====
+  "files.associations": {
+    "*.ps1": "powershell",
+    "*.psm1": "powershell",
+    "*.psd1": "powershell"
+  },
+
+  // ===== Excludes (yours) =====
+  "files.exclude": {
+    "**/.git": true,
+    "**/*.bak": true,
+    "**/*.backup": true,
+    "**/*.old": true,
+    "**/vault/blobs": true
+  },
+  "search.exclude": {
+    "**/logs": true,
+    "**/.ai/archive": true,
+    "**/vault/blobs": true
+  },
+
+  // ===== Debug/terminal (yours) =====
+  "debug.internalConsoleOptions": "neverOpen",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // ===== Line endings (yours) =====
+  "files.eol": "\r\n",
+
+  // ===== Recommended extensions (yours) =====
+  "extensions.recommendations": [
+    "ms-vscode.powershell",
+    "ms-vscode.powershell-preview"
+  ]
+}

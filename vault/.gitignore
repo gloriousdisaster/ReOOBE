@@ -1,0 +1,23 @@
+# Ignore all vault contents except README and .gitignore
+*
+!README.md
+!.gitignore
+
+# Explicitly ignore sensitive files even if forced
+*.blob
+*.txt
+*.key
+*.password
+*.secret
+*.credentials
+
+# Ignore backup files
+*.bak
+*.backup
+*.old
+
+# Never allow these even with -f flag
+vault.blob
+vault.txt
+passwords.*
+credentials.*
